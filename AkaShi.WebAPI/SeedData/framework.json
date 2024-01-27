@@ -1,0 +1,177 @@
+[
+  {
+    "Id": 1,
+    "ProductName": ".NET",
+    "VersionName": "net8.0"
+  },
+  {
+    "Id": 2,
+    "ProductName": ".NET",
+    "VersionName": "net7.0"
+  },
+  {
+    "Id": 3,
+    "ProductName": ".NET",
+    "VersionName": "net6.0"
+  },
+  {
+    "Id": 4,
+    "ProductName": ".NET",
+    "VersionName": "net5.0"
+  },
+  {
+    "Id": 5,
+    "ProductName": ".NET Core",
+    "VersionName": "netcoreapp3.1"
+  },
+  {
+    "Id": 6,
+    "ProductName": ".NET Core",
+    "VersionName": "netcoreapp3.0"
+  },
+  {
+    "Id": 7,
+    "ProductName": ".NET Core",
+    "VersionName": "netcoreapp2.2"
+  },
+  {
+    "Id": 8,
+    "ProductName": ".NET Core",
+    "VersionName": "netcoreapp2.1"
+  },
+  {
+    "Id": 9,
+    "ProductName": ".NET Core",
+    "VersionName": "netcoreapp2.0"
+  },
+  {
+    "Id": 10,
+    "ProductName": ".NET Core",
+    "VersionName": "netcoreapp1.1"
+  },
+  {
+    "Id": 11,
+    "ProductName": ".NET Core",
+    "VersionName": "netcoreapp1.0"
+  },
+  {
+    "Id": 12,
+    "ProductName": ".NET Standard",
+    "VersionName": "netstandard2.1"
+  },
+  {
+    "Id": 13,
+    "ProductName": ".NET Standard",
+    "VersionName": "netstandard2.0"
+  },
+  {
+    "Id": 14,
+    "ProductName": ".NET Standard",
+    "VersionName": "netstandard1.6"
+  },
+  {
+    "Id": 15,
+    "ProductName": ".NET Standard",
+    "VersionName": "netstandard1.5"
+  },
+  {
+    "Id": 16,
+    "ProductName": ".NET Standard",
+    "VersionName": "netstandard1.4"
+  },
+  {
+    "Id": 17,
+    "ProductName": ".NET Standard",
+    "VersionName": "netstandard1.3"
+  },
+  {
+    "Id": 18,
+    "ProductName": ".NET Standard",
+    "VersionName": "netstandard1.2"
+  },
+  {
+    "Id": 19,
+    "ProductName": ".NET Standard",
+    "VersionName": "netstandard1.1"
+  },
+  {
+    "Id": 20,
+    "ProductName": ".NET Standard",
+    "VersionName": "netstandard1.0"
+  },
+  {
+    "Id": 21,
+    "ProductName": ".NET Framework",
+    "VersionName": "net481"
+  },
+  {
+    "Id": 22,
+    "ProductName": ".NET Framework",
+    "VersionName": "net48"
+  },
+  {
+    "Id": 23,
+    "ProductName": ".NET Framework",
+    "VersionName": "net472"
+  },
+  {
+    "Id": 24,
+    "ProductName": ".NET Framework",
+    "VersionName": "net471"
+  },
+  {
+    "Id": 25,
+    "ProductName": ".NET Framework",
+    "VersionName": "net47"
+  },
+  {
+    "Id": 26,
+    "ProductName": ".NET Framework",
+    "VersionName": "net462"
+  },
+  {
+    "Id": 27,
+    "ProductName": ".NET Framework",
+    "VersionName": "net461"
+  },
+  {
+    "Id": 28,
+    "ProductName": ".NET Framework",
+    "VersionName": "net46"
+  },
+  {
+    "Id": 29,
+    "ProductName": ".NET Framework",
+    "VersionName": "net452"
+  },
+  {
+    "Id": 30,
+    "ProductName": ".NET Framework",
+    "VersionName": "net451"
+  },
+  {
+    "Id": 31,
+    "ProductName": ".NET Framework",
+    "VersionName": "net45"
+  },
+  {
+    "Id": 32,
+    "ProductName": ".NET Framework",
+    "VersionName": "net40"
+  },
+  {
+    "Id": 33,
+    "ProductName": ".NET Framework",
+    "VersionName": "net35"
+  },
+  {
+    "Id": 34,
+    "ProductName": ".NET Framework",
+    "VersionName": "net30"
+  },
+  {
+    "Id": 35,
+    "ProductName": ".NET Framework",
+    "VersionName": "net20"
+  }
+]
