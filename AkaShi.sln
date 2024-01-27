@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkaShi.WebAPI", "AkaShi.WebAPI\AkaShi.WebAPI.csproj", "{DD566091-6955-418E-AF41-465B0543E484}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkaShi.Core", "AkaShi.Core\AkaShi.Core.csproj", "{066D6ED9-DE04-4B0F-BD41-6889F5333C12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkaShi.Infrastructure", "AkaShi.Infrastructure\AkaShi.Infrastructure.csproj", "{D5EF4797-EAAC-4155-8EAE-8B20585C86BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD566091-6955-418E-AF41-465B0543E484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD566091-6955-418E-AF41-465B0543E484}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD566091-6955-418E-AF41-465B0543E484}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD566091-6955-418E-AF41-465B0543E484}.Release|Any CPU.Build.0 = Release|Any CPU
+		{066D6ED9-DE04-4B0F-BD41-6889F5333C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{066D6ED9-DE04-4B0F-BD41-6889F5333C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{066D6ED9-DE04-4B0F-BD41-6889F5333C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{066D6ED9-DE04-4B0F-BD41-6889F5333C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5EF4797-EAAC-4155-8EAE-8B20585C86BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5EF4797-EAAC-4155-8EAE-8B20585C86BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5EF4797-EAAC-4155-8EAE-8B20585C86BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5EF4797-EAAC-4155-8EAE-8B20585C86BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
