@@ -28,8 +28,8 @@ public class LibraryRepository : BaseRepository, ILibraryRepository
             .Include(lib => lib.Logo)
                 .ThenInclude(img => img.FileExtension)
             .Include(lib => lib.User)
-            .Include(lib => lib.LibraryVersionDependencies)
             .Include(lib => lib.LibraryVersions)
+            .Include(lib => lib.LibraryVersionDependencies)
             .FirstOrDefaultAsync(lib => lib.Id == id);
     }
     
@@ -51,9 +51,7 @@ public class LibraryRepository : BaseRepository, ILibraryRepository
         var query = Context.Libraries
                 .Include(lib => lib.Logo)
                 .Include(lib => lib.User)
-                /*.Include(lib => lib.LibraryVersions)
-                    .ThenInclude(lv => lv.LibraryVersionSupportedFrameworks)
-                        .ThenInclude(sf => sf.Framework)*/
+                .Include(lib => lib.LibraryVersions)
                 .AsQueryable();
         
         if (libraryParams.SearchTerm is not null)
@@ -61,41 +59,36 @@ public class LibraryRepository : BaseRepository, ILibraryRepository
             query = query.Where(f => f.Name.ToLower().Contains(libraryParams.SearchTerm.ToLower()));
         }
         
-        /*var filter = libraryParams.FilterParams.FrameworkProductNameFilter;
-
-        if (filter.DotNet)
+        if (libraryParams.LibrariesFilter.DotNet)
         {
             query = query.Where(l => l.LibraryVersions.Any(lv => lv.LibraryVersionSupportedFrameworks
                 .Any(f => f.Framework.ProductName == ".NET")));
         }
 
-        if (filter.DotNetCore)
+        if (libraryParams.LibrariesFilter.DotNetCore)
         {
             query = query.Where(l => l.LibraryVersions.Any(lv => lv.LibraryVersionSupportedFrameworks
                 .Any(f => f.Framework.ProductName == ".NET Core")));
         }
         
-        if (filter.DotNetFramework)
+        if (libraryParams.LibrariesFilter.DotNetFramework)
         {
             query = query.Where(l => l.LibraryVersions.Any(lv => lv.LibraryVersionSupportedFrameworks
                 .Any(f => f.Framework.ProductName == ".NET Framework")));
         }
         
-        if (filter.DotNetStandard)
+        if (libraryParams.LibrariesFilter.DotNetStandard)
         {
             query = query.Where(l => l.LibraryVersions.Any(lv => lv.LibraryVersionSupportedFrameworks
                 .Any(f => f.Framework.ProductName == ".NET Standard")));
-        }*/
-
-        if (libraryParams.OrderByParams is { OrderBy: not null })
-        {
-            query = libraryParams.OrderByParams.OrderBy switch
-            {
-                OrderBy.Downloads => query.OrderByDescending(l => l.DownloadsCount),
-                OrderBy.LastUpdated => query.OrderByDescending(l => l.LastUpdateTime),
-                _ => query
-            };
         }
+
+        query = libraryParams.SortBy switch
+        {
+            SortBy.Downloads => query.OrderByDescending(l => l.DownloadsCount),
+            SortBy.LastUpdated => query.OrderByDescending(l => l.LastUpdateTime),
+            _ => query
+        };
 
         return await PagedList<Library>.CreateAsync(query, libraryParams.PageNumber, libraryParams.PageSize);
     }

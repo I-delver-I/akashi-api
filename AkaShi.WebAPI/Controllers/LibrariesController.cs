@@ -35,30 +35,16 @@ public class LibrariesController : ControllerBase
     
     [HttpGet]
     [AllowAnonymous]
-    public async Task<ActionResult<PagedList<LibraryDTO>>> Get([FromHeader] bool dotNet, 
-        [FromHeader] bool dotNetCore, [FromHeader] bool dotNetStandard, 
-        [FromHeader] bool dotNetFramework, [FromHeader] OrderBy? orderByParams = null, 
-        [FromHeader] int pageNumber = 1, [FromHeader] int pageSize = 10, [FromQuery] string? searchTerm = null)
+    public async Task<ActionResult<PagedList<LibraryDTO>>> Get(string frameworks = null, string q = null, 
+        SortBy sortBy = SortBy.Downloads, int page = 1, [FromHeader] int pageSize = 10)
     {
         var libraryParams = new LibraryParams
         {
-            PageNumber = pageNumber,
+            PageNumber = page,
             PageSize = pageSize,
-            FilterParams = new FilterParams
-            {
-                FrameworkProductNameFilter = new FrameworkProductNameFilter
-                {
-                    DotNet = dotNet,
-                    DotNetCore = dotNetCore,
-                    DotNetFramework = dotNetFramework,
-                    DotNetStandard = dotNetStandard
-                }
-            },
-            OrderByParams = new OrderByParams
-            {
-                OrderBy = orderByParams
-            },
-            SearchTerm = searchTerm
+            LibrariesFilter = LibrariesFilter.ParseFromString(frameworks),
+            SortBy = sortBy,
+            SearchTerm = q
         };
         
         return Ok(await _libraryService.GetLibrariesAsync(libraryParams));

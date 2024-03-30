@@ -12,6 +12,15 @@ public class LibraryVersionDependencyRepository : BaseRepository, ILibraryVersio
     {
     }
 
+    public async Task<IEnumerable<LibraryVersionDependency>> GetByLibraryVersionId(int id)
+    {
+        return await Context.LibraryVersionDependencies
+            .Include(d => d.Framework)
+            .Include(d => d.DependencyLibrary)
+            .Where(d => d.LibraryVersionId == id)
+            .ToListAsync();
+    }
+
     public async Task<IEnumerable<LibraryVersionDependency>> GetAllAsync()
     {
         return await Context.LibraryVersionDependencies.ToListAsync();

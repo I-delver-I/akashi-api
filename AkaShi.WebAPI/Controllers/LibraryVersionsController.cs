@@ -1,4 +1,6 @@
 using AkaShi.Core.DTO.LibraryVersion;
+using AkaShi.Core.DTO.LibraryVersionDependency;
+using AkaShi.Core.Helpers.RepositoryParams;
 using AkaShi.Core.ServiceContracts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -16,17 +18,28 @@ public class LibraryVersionsController : ControllerBase
     {
         _libraryVersionService = libraryVersionService;
     }
+
+    [HttpGet("dependencies/{libraryVersionId:int}")]
+    [AllowAnonymous]
+    public async Task<ActionResult<ICollection<LibraryVersionDependencyDTO>>> GetDependencies(int libraryVersionId)
+    {
+        var dependencies = await _libraryVersionService.GetLibraryVersionDependenciesAsync(libraryVersionId);
+        return Ok(dependencies);
+    }
     
     [HttpGet("by-library/{libraryId:int}")]
     [AllowAnonymous]
-    public async Task<ActionResult<ICollection<LibraryVersionDTO>>> GetByLibraryId(int libraryId)
+    public async Task<ActionResult<ICollection<LibraryVersionDTO>>> GetByLibraryId(int libraryId, 
+        [FromHeader] int pageSize = 10, [FromHeader] int pageNumber = 1)
     {
-        var libraryVersions = 
-            await _libraryVersionService.GetLibraryVersionsByLibraryIdAsync(libraryId);
-        if (libraryVersions is null || !libraryVersions.Any())
+        var libraryVersionParams = new LibraryVersionParams
         {
-            return NotFound();
-        }
+            PageNumber = pageNumber,
+            PageSize = pageSize
+        };
+        
+        var libraryVersions = 
+            await _libraryVersionService.GetLibraryVersionsByLibraryIdAsync(libraryVersionParams, libraryId);
     
         return Ok(libraryVersions);
     }
@@ -34,14 +47,21 @@ public class LibraryVersionsController : ControllerBase
     
     [HttpGet]
     [AllowAnonymous]
-    public async Task<ActionResult<ICollection<LibraryVersionDTO>>> Get()
+    public async Task<ActionResult<ICollection<LibraryVersionDTO>>> Get([FromHeader] int pageSize = 10, 
+        [FromHeader] int pageNumber = 1)
     {
-        return Ok(await _libraryVersionService.GetLibraryVersionsAsync());
+        var libraryVersionParams = new LibraryVersionParams
+        {
+            PageNumber = pageNumber,
+            PageSize = pageSize
+        };
+        
+        return Ok(await _libraryVersionService.GetLibraryVersionsAsync(libraryVersionParams));
     }
     
-    [HttpGet("download/{id:int}/{format}")]
+    [HttpGet("download/{id:int}")]
     [AllowAnonymous]
-    public async Task<IActionResult> DownloadLibraryVersion(int id, string format)
+    public async Task<IActionResult> DownloadLibraryVersion(int id, [FromHeader] string format)
     {
         var downloadLibraryVersion = await _libraryVersionService.DownloadLibraryVersionAsync(id, format);
         return File(downloadLibraryVersion.FileContent, downloadLibraryVersion.ContentType, 

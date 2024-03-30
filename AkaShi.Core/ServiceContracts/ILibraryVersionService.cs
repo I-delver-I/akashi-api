@@ -1,11 +1,17 @@
 using AkaShi.Core.DTO.LibraryVersion;
+using AkaShi.Core.DTO.LibraryVersionDependency;
+using AkaShi.Core.Helpers;
+using AkaShi.Core.Helpers.RepositoryParams;
 
 namespace AkaShi.Core.ServiceContracts;
 
 public interface ILibraryVersionService
 {
-    Task<ICollection<LibraryVersionDTO>> GetLibraryVersionsByLibraryIdAsync(int libraryId);
+    Task<ICollection<LibraryVersionDependencyDTO>> GetLibraryVersionDependenciesAsync(int libraryVersionId);
+    Task<PagedList<LibraryVersionDTO>> GetLibraryVersionsByLibraryIdAsync(LibraryVersionParams libraryVersionParams, 
+        int libraryId);
     Task<DownloadLibraryVersionDTO> DownloadLibraryVersionAsync(int id, string archiveFormat);
+    Task<PagedList<LibraryVersionDTO>> GetLibraryVersionsAsync(LibraryVersionParams libraryVersionParams);
     Task<ICollection<LibraryVersionDTO>> GetLibraryVersionsAsync();
     Task<LibraryVersionDTO> GetLibraryVersionByIdAsync(int id);
     Task<LibraryVersionDTO> CreateLibraryVersionAsync(NewLibraryVersionDTO newLibraryVersionDto);

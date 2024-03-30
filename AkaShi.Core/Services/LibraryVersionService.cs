@@ -4,13 +4,14 @@ using AkaShi.Core.DTO.LibraryVersion;
 using AkaShi.Core.DTO.LibraryVersionDependency;
 using AkaShi.Core.DTO.LibraryVersionSupportedFramework;
 using AkaShi.Core.Exceptions;
+using AkaShi.Core.Helpers;
+using AkaShi.Core.Helpers.RepositoryParams;
 using AkaShi.Core.Logic.Abstractions;
 using AkaShi.Core.ServiceContracts;
 using AkaShi.Core.Services.Abstract;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Serilog;
-using SevenZip;
 using SharpCompress.Archives;
 using SharpCompress.Common;
 using SharpCompress.Writers;
@@ -24,6 +25,7 @@ public class LibraryVersionService : BaseService, ILibraryVersionService
     private readonly IFrameworkRepository _frameworkRepository;
     private readonly IFileHashRepository _fileHashRepository;
     private readonly ILibraryRepository _libraryRepository;
+    private readonly ILibraryVersionDependencyRepository _libraryVersionDependencyRepository;
     
     private readonly IFirebaseStorageService _firebaseStorageService;
     private readonly ILibraryArchiveValidationService _libraryArchiveValidationService;
@@ -46,6 +48,7 @@ public class LibraryVersionService : BaseService, ILibraryVersionService
         _frameworkRepository = UnitOfWork.FrameworkRepository;
         _fileHashRepository = UnitOfWork.FileHashRepository;
         _libraryRepository = UnitOfWork.LibraryRepository;
+        _libraryVersionDependencyRepository = UnitOfWork.LibraryVersionDependencyRepository;
         
         _firebaseStorageService = firebaseStorageService;
         _libraryArchiveValidationService = libraryArchiveValidationService;
@@ -55,10 +58,25 @@ public class LibraryVersionService : BaseService, ILibraryVersionService
         _libraryVersionSupportedFrameworkService = libraryVersionSupportedFrameworkService;
         _fileUtilityService = fileUtilityService;
     }
-
-    public async Task<ICollection<LibraryVersionDTO>> GetLibraryVersionsByLibraryIdAsync(int id)
+    
+    public async Task<ICollection<LibraryVersionDependencyDTO>> GetLibraryVersionDependenciesAsync(int libraryVersionId)
     {
-        return Mapper.Map<ICollection<LibraryVersionDTO>>(await _libraryVersionRepository.GetByLibraryIdAsync(id));
+        var versionDependencies = await _libraryVersionDependencyRepository.GetByLibraryVersionId(libraryVersionId);
+        if (versionDependencies is null)
+        {
+            throw new NotFoundException(nameof(LibraryVersion), libraryVersionId);
+        }
+
+        return Mapper.Map<ICollection<LibraryVersionDependencyDTO>>(versionDependencies);
+    }
+
+    public async Task<PagedList<LibraryVersionDTO>> GetLibraryVersionsByLibraryIdAsync
+        (LibraryVersionParams libraryVersionParams, int id)
+    {
+        var libraryVersions = await _libraryVersionRepository
+            .GetByLibraryIdAsync(libraryVersionParams, id);
+        return new PagedList<LibraryVersionDTO>(Mapper.Map<IEnumerable<LibraryVersionDTO>>(libraryVersions.Items), 
+            libraryVersions.TotalCount, libraryVersions.CurrentPage, libraryVersions.PageSize);
     }
 
     public async Task<DownloadLibraryVersionDTO> DownloadLibraryVersionAsync(int id, string archiveFormat)
@@ -195,12 +213,20 @@ public class LibraryVersionService : BaseService, ILibraryVersionService
         });
     }
     
+    public async Task<PagedList<LibraryVersionDTO>> GetLibraryVersionsAsync(LibraryVersionParams libraryParams)
+    {
+        var libraryVersions = await _libraryVersionRepository.GetAllAsync(libraryParams);
+        
+        return new PagedList<LibraryVersionDTO>(Mapper.Map<IEnumerable<LibraryVersionDTO>>(libraryVersions.Items), 
+            libraryVersions.TotalCount, libraryVersions.CurrentPage, libraryVersions.PageSize);
+    }
+
     public async Task<ICollection<LibraryVersionDTO>> GetLibraryVersionsAsync()
     {
-        var libraries = await _libraryVersionRepository.GetAllAsync();
-        return Mapper.Map<ICollection<LibraryVersionDTO>>(libraries);
+        var libraryVersions = await _libraryVersionRepository.GetAllAsync();
+        return Mapper.Map<ICollection<LibraryVersionDTO>>(libraryVersions);
     }
-    
+
     public async Task<LibraryVersionDTO> GetLibraryVersionByIdAsync(int id)
     {
         var library = await _libraryVersionRepository.GetByIdAsync(id);

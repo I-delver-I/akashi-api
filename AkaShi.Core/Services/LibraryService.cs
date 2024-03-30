@@ -222,7 +222,7 @@ public class LibraryService : BaseService, ILibraryService
                 await _imageService.DeleteImage((int)libraryEntity.LogoId, libraryStoragePath);
             }
 
-            await _libraryRepository.DeleteByIdAsync(id);
+            _libraryRepository.Delete(libraryEntity);
             await UnitOfWork.SaveAsync();
 
             await _firebaseStorageService.RemoveAsync($"{libraryStoragePath}/");

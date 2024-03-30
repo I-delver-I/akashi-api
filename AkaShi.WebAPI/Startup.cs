@@ -84,6 +84,7 @@ public class Startup
             .AllowAnyHeader()
             .WithExposedHeaders("Token-Expired")
             .AllowCredentials()
+            .WithExposedHeaders("Content-Disposition")
             .WithOrigins("http://localhost:3000"));
         app.UseRouting();
         app.UseHttpsRedirection();

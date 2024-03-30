@@ -1,6 +1,6 @@
 namespace AkaShi.Core.Helpers;
 
-public enum OrderBy
+public enum SortBy
 {
     Downloads,
     LastUpdated

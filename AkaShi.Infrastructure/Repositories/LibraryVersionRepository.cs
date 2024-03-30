@@ -1,5 +1,7 @@
 using AkaShi.Core.Domain.Entities;
 using AkaShi.Core.Domain.RepositoryContracts;
+using AkaShi.Core.Helpers;
+using AkaShi.Core.Helpers.RepositoryParams;
 using AkaShi.Infrastructure.Context;
 using AkaShi.Infrastructure.Repositories.Abstract;
 using Microsoft.EntityFrameworkCore;
@@ -12,19 +14,33 @@ public class LibraryVersionRepository : BaseRepository, ILibraryVersionRepositor
     {
     }
 
-    public async Task<IEnumerable<LibraryVersion>> GetByLibraryIdAsync(int id)
+    public async Task<PagedList<LibraryVersion>> GetByLibraryIdAsync(LibraryVersionParams libraryVersionParams, int id)
     {
-        return await Context.LibraryVersions
+        var query = Context.LibraryVersions
             .Where(lv => lv.LibraryId == id)
-            .ToListAsync();
+            .AsQueryable();
+        
+        return await PagedList<LibraryVersion>.CreateAsync(query, libraryVersionParams.PageNumber, 
+            libraryVersionParams.PageSize);
     }
-    
+
+    public async Task<PagedList<LibraryVersion>> GetAllAsync(LibraryVersionParams libraryVersionParams)
+    {
+        var query = Context.LibraryVersions
+            .Include(lv => lv.Library)
+            .Include(lv => lv.FileExtension)
+            .AsQueryable();
+        
+        return await PagedList<LibraryVersion>.CreateAsync
+            (query, libraryVersionParams.PageNumber, libraryVersionParams.PageSize);
+    }
+
     public async Task<IEnumerable<LibraryVersion>> GetAllAsync()
     {
         return await Context.LibraryVersions
             .Include(lv => lv.Library)
             .Include(lv => lv.FileExtension)
-            .ToArrayAsync();
+            .ToListAsync();
     }
 
     public async Task<LibraryVersion> GetByIdAsync(int id)
@@ -41,6 +57,7 @@ public class LibraryVersionRepository : BaseRepository, ILibraryVersionRepositor
             
             .Include(lv => lv.LibraryVersionSupportedFrameworks)
                 .ThenInclude(sf => sf.Framework)
+            
             .FirstOrDefaultAsync(lv => lv.Id == id);
     }
 

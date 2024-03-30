@@ -5,5 +5,5 @@ namespace AkaShi.Core.Domain.RepositoryContracts;
 
 public interface ILibraryVersionDependencyRepository : IRepository<LibraryVersionDependency>
 {
-    
+    Task<IEnumerable<LibraryVersionDependency>> GetByLibraryVersionId(int id);
 }
