@@ -111,7 +111,7 @@
         private async Task<bool> IsValidEntry(IArchiveEntry entry, string libraryName, 
             IEnumerable<string> frameworkVersionNames)
         {
-            var parts = entry.Key.Split(@"\");
+            var parts = entry.Key.Split(@"/");
             if (!IsValidEntryStructure(parts, frameworkVersionNames))
             {
                 return false;

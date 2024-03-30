@@ -32,7 +32,7 @@ public class LibraryArchiveExtractorService : BaseService, ILibraryArchiveExtrac
         foreach (var entry in archive.Entries
                      .Where(e => !e.IsDirectory && e.Key.EndsWith(ApplicationConstants.DllExtension)))
         {
-            var frameworkVersion = entry.Key.Split(@"\")[1];
+            var frameworkVersion = entry.Key.Split(@"/")[1];
             
             var frameworkProductName = frameworks
                 .FirstOrDefault(f => f.VersionName == frameworkVersion)?.ProductName;
@@ -60,7 +60,7 @@ public class LibraryArchiveExtractorService : BaseService, ILibraryArchiveExtrac
         foreach (var entry in archive.Entries.Where(e => !e.IsDirectory 
                                                          && e.Key.EndsWith(ApplicationConstants.DllExtension)))
         {
-            var frameworkVersion = entry.Key.Split(@"\")[1];
+            var frameworkVersion = entry.Key.Split(@"/")[1];
 
             await using var entryStream = entry.OpenEntryStream();
             var dllDependencies = ExtractDependenciesFromDll(entryStream)
