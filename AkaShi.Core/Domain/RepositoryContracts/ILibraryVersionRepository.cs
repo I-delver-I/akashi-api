@@ -7,6 +7,6 @@ namespace AkaShi.Core.Domain.RepositoryContracts;
 
 public interface ILibraryVersionRepository : IRepository<LibraryVersion>
 {
-    Task<PagedList<LibraryVersion>> GetByLibraryIdAsync(LibraryVersionParams libraryVersionParams, int id);
+    Task<IEnumerable<LibraryVersion>> GetByLibraryIdAsync(int id);
     Task<PagedList<LibraryVersion>> GetAllAsync(LibraryVersionParams libraryVersionParams);
 }

@@ -8,8 +8,7 @@ namespace AkaShi.Core.ServiceContracts;
 public interface ILibraryVersionService
 {
     Task<ICollection<LibraryVersionDependencyDTO>> GetLibraryVersionDependenciesAsync(int libraryVersionId);
-    Task<PagedList<LibraryVersionDTO>> GetLibraryVersionsByLibraryIdAsync(LibraryVersionParams libraryVersionParams, 
-        int libraryId);
+    Task<IEnumerable<LibraryVersionDTO>> GetLibraryVersionsByLibraryIdAsync(int libraryId);
     Task<DownloadLibraryVersionDTO> DownloadLibraryVersionAsync(int id, string archiveFormat);
     Task<PagedList<LibraryVersionDTO>> GetLibraryVersionsAsync(LibraryVersionParams libraryVersionParams);
     Task<ICollection<LibraryVersionDTO>> GetLibraryVersionsAsync();

@@ -14,14 +14,13 @@ public class LibraryVersionRepository : BaseRepository, ILibraryVersionRepositor
     {
     }
 
-    public async Task<PagedList<LibraryVersion>> GetByLibraryIdAsync(LibraryVersionParams libraryVersionParams, int id)
+    public async Task<IEnumerable<LibraryVersion>> GetByLibraryIdAsync(int id)
     {
-        var query = Context.LibraryVersions
+        return await Context.LibraryVersions
             .Where(lv => lv.LibraryId == id)
-            .AsQueryable();
-        
-        return await PagedList<LibraryVersion>.CreateAsync(query, libraryVersionParams.PageNumber, 
-            libraryVersionParams.PageSize);
+            .Include(lv => lv.Library)
+            .Include(lv => lv.FileExtension)
+            .ToListAsync();
     }
 
     public async Task<PagedList<LibraryVersion>> GetAllAsync(LibraryVersionParams libraryVersionParams)

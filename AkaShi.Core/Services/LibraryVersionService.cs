@@ -70,13 +70,12 @@ public class LibraryVersionService : BaseService, ILibraryVersionService
         return Mapper.Map<ICollection<LibraryVersionDependencyDTO>>(versionDependencies);
     }
 
-    public async Task<PagedList<LibraryVersionDTO>> GetLibraryVersionsByLibraryIdAsync
-        (LibraryVersionParams libraryVersionParams, int id)
+    public async Task<IEnumerable<LibraryVersionDTO>> GetLibraryVersionsByLibraryIdAsync(int id)
     {
         var libraryVersions = await _libraryVersionRepository
-            .GetByLibraryIdAsync(libraryVersionParams, id);
-        return new PagedList<LibraryVersionDTO>(Mapper.Map<IEnumerable<LibraryVersionDTO>>(libraryVersions.Items), 
-            libraryVersions.TotalCount, libraryVersions.CurrentPage, libraryVersions.PageSize);
+            .GetByLibraryIdAsync(id);
+        
+        return Mapper.Map<IEnumerable<LibraryVersionDTO>>(libraryVersions);
     }
 
     public async Task<DownloadLibraryVersionDTO> DownloadLibraryVersionAsync(int id, string archiveFormat)
@@ -249,6 +248,11 @@ public class LibraryVersionService : BaseService, ILibraryVersionService
         if (library is null)
         {
             throw new NotFoundException(nameof(Library), newLibraryVersionDto.LibraryId);
+        }
+
+        if (library.UserId != _userDataGetter.CurrentUserId)
+        {
+            throw new UnauthorizedAccessException("You are not allowed to create a new library version for this library.");
         }
         
         await using var transaction = await UnitOfWork.BeginTransactionAsync();
@@ -426,6 +430,11 @@ public class LibraryVersionService : BaseService, ILibraryVersionService
         if (libraryVersionEntity is null)
         {
             throw new NotFoundException(nameof(LibraryVersion), updateLibraryVersionDto.Id);
+        }
+        
+        if (libraryVersionEntity.Library.UserId != _userDataGetter.CurrentUserId)
+        {
+            throw new UnauthorizedAccessException("You are not allowed to update this library version.");
         }
         
         libraryVersionEntity.LastUpdateTime = DateTime.UtcNow;

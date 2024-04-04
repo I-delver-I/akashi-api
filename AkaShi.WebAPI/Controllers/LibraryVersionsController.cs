@@ -29,17 +29,10 @@ public class LibraryVersionsController : ControllerBase
     
     [HttpGet("by-library/{libraryId:int}")]
     [AllowAnonymous]
-    public async Task<ActionResult<ICollection<LibraryVersionDTO>>> GetByLibraryId(int libraryId, 
-        [FromHeader] int pageSize = 10, [FromHeader] int pageNumber = 1)
+    public async Task<ActionResult<ICollection<LibraryVersionDTO>>> GetByLibraryId(int libraryId)
     {
-        var libraryVersionParams = new LibraryVersionParams
-        {
-            PageNumber = pageNumber,
-            PageSize = pageSize
-        };
-        
         var libraryVersions = 
-            await _libraryVersionService.GetLibraryVersionsByLibraryIdAsync(libraryVersionParams, libraryId);
+            await _libraryVersionService.GetLibraryVersionsByLibraryIdAsync(libraryId);
     
         return Ok(libraryVersions);
     }
