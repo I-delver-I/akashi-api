@@ -14,6 +14,16 @@ public class LibraryRepository : BaseRepository, ILibraryRepository
     {
     }
     
+    public async Task<IEnumerable<Library>> GetByUserIdAsync(int userId)
+    {
+        return await Context.Libraries
+            .Include(lib => lib.Logo)
+            .Include(lib => lib.User)
+            .Include(lib => lib.LibraryVersions)
+            .Where(lib => lib.UserId == userId)
+            .ToListAsync();
+    }
+    
     public async Task<IEnumerable<Library>> GetAllAsync()
     {
         return await Context.Libraries

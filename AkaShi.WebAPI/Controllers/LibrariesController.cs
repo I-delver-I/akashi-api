@@ -18,20 +18,12 @@ public class LibrariesController : ControllerBase
     {
         _libraryService = libraryService;
     }
-    
-    /*[HttpGet]
-    [AllowAnonymous]
-    public async Task<ActionResult<PagedList<LibraryDTO>>> Get(int pageNumber = 1, int pageSize = 10,
-        [FromQuery] string? searchTerm = null)
+
+    [HttpGet("current-user")]
+    public async Task<ActionResult<LibraryDTO>> GetCurrentUserLibraries()
     {
-        var paginatedParams = new PaginatedParams()
-        {
-            PageNumber = pageNumber,
-            PageSize = pageSize
-        };
-        
-        return Ok(await _libraryService.GetLibrariesAsync(paginatedParams, searchTerm));
-    }*/
+        return Ok(await _libraryService.GetCurrentUserLibrariesAsync());
+    }
     
     [HttpGet]
     [AllowAnonymous]

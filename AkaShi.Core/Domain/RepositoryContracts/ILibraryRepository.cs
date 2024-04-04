@@ -7,6 +7,7 @@ namespace AkaShi.Core.Domain.RepositoryContracts;
 
 public interface ILibraryRepository : IRepository<Library>
 {
+    Task<IEnumerable<Library>> GetByUserIdAsync(int userId);
     Task<Library> GetByNameAsync(string name);
     Task<IEnumerable<Library>> GetTopDownloadedLibrariesAsync(int count);
     Task<PagedList<Library>> GetAllAsync(LibraryParams libraryParams);

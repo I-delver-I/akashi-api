@@ -41,6 +41,13 @@ public class LibraryService : BaseService, ILibraryService
         _dependencyService = dependencyService;
     }
     
+    public async Task<ICollection<LibraryDTO>> GetCurrentUserLibrariesAsync()
+    {
+        var libraries = await _libraryRepository.GetByUserIdAsync(_userDataGetter.CurrentUserId);
+
+        return Mapper.Map<ICollection<LibraryDTO>>(libraries);
+    }
+    
     public async Task<LibraryDTO> GetLibraryByNameAsync(string name)
     {
         var library = await _libraryRepository.GetByNameAsync(name);
@@ -120,6 +127,11 @@ public class LibraryService : BaseService, ILibraryService
         if (libraryEntity is null)
         {
             throw new NotFoundException(nameof(Library), updateLibraryDto.Id);
+        }
+
+        if (libraryEntity.UserId != _userDataGetter.CurrentUserId)
+        {
+            throw new UnauthorizedAccessException("You are not allowed to update this library.");
         }
         
         libraryEntity.LastUpdateTime = DateTime.Now;

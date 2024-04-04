@@ -6,6 +6,7 @@ namespace AkaShi.Core.ServiceContracts;
 
 public interface ILibraryService
 {
+    Task<ICollection<LibraryDTO>> GetCurrentUserLibrariesAsync();
     Task<PagedList<LibraryDTO>> GetLibrariesAsync(LibraryParams libraryParams);
     Task<LibraryDTO> GetLibraryByIdAsync(int id);
     Task<LibraryDTO> CreateLibraryAsync(NewLibraryDTO newLibraryDto);
