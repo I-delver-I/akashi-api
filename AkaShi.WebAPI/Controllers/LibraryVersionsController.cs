@@ -82,6 +82,18 @@ public class LibraryVersionsController : ControllerBase
             new { id = createdLibraryVersion.Id }, createdLibraryVersion);
     }
     
+    [HttpPut]
+    public async Task<IActionResult> Put([FromForm] UpdateLibraryVersionDTO libraryVersionDto)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+        
+        await _libraryVersionService.UpdateLibraryVersionAsync(libraryVersionDto);
+        return NoContent();
+    }
+    
     [HttpDelete("{id:int}")]
     public async Task<IActionResult> Delete(int id)
     {
