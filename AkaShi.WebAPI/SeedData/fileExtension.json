@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 1,
+    "Name": ".png"
+  },
+  {
+    "Id": 2,
+    "Name": ".jpg"
+  },
+  {
+    "Id": 3,
+    "Name": ".jpeg"
+  },
+  {
+    "Id": 4,
+    "Name": ".webp"
+  },
+  {
+    "Id": 5,
+    "Name": ".zip"
+  },
+  {
+    "Id": 6,
+    "Name": ".rar"
+  },
+  {
+    "Id": 7,
+    "Name": ".tar"
+  },
+  {
+    "Id": 8,
+    "Name": ".gzip"
+  },
+  {
+    "Id": 9,
+    "Name": ".7z"
+  }
+]

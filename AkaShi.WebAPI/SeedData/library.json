@@ -1,0 +1,168 @@
+[
+  {
+    "Id": 1,
+    "Name": "Newtonsoft.Json",
+    "UserId": 1,
+    "DownloadsCount": 1152633305,
+    "LastUpdateTime": "2023-03-08",
+    "ShortDescription": "Json.NET is a popular high-performance JSON framework for .NET",
+    "ProjectWebsiteURL": "https://www.newtonsoft.com/json",
+    "Tags": "json",
+    "LogoId": 2
+  },
+  {
+    "Id": 2,
+    "Name": "Microsoft.Extensions.DependencyInjection",
+    "UserId": 2,
+    "DownloadsCount": 480217228,
+    "LastUpdateTime": "2023-11-14",
+    "ShortDescription": "Supports the dependency injection (DI) software design pattern which is a technique for achieving Inversion of Control (IoC) between classes and their dependencies.",
+    "ProjectWebsiteURL": "https://dotnet.microsoft.com/en-us/",
+    "Tags": "",
+    "LogoId": 6
+  },
+  {
+    "Id": 3,
+    "Name": "Microsoft.EntityFrameworkCore",
+    "UserId": 2,
+    "DownloadsCount": 50223257,
+    "LastUpdateTime": "2023-11-14",
+    "ShortDescription": "Entity Framework Core is a modern object-database mapper for .NET. It supports LINQ queries, change tracking, updates, and schema migrations.",
+    "ProjectWebsiteURL": "https://learn.microsoft.com/en-us/ef/core/",
+    "Tags": "Entity Framework Core entity-framework-core EF O/RM Data EntityFramework EntityFrameworkCore EFCore",
+    "LogoId": 5
+  },
+  {
+    "Id": 4,
+    "Name": "System.IdentityModel.Tokens.Jwt",
+    "UserId": 1,
+    "DownloadsCount": 200910090,
+    "LastUpdateTime": "2023-10-17",
+    "ShortDescription": "Includes types that provide support for creating, serializing and validating JSON Web Tokens.",
+    "ProjectWebsiteURL": "https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet",
+    "Tags": ".NET Windows Authentication Identity Json Web Token",
+    "LogoId": 1
+  },
+  {
+    "Id": 5,
+    "Name": "Serilog",
+    "UserId": 3,
+    "DownloadsCount": 75616379,
+    "LastUpdateTime": "2023-11-17",
+    "ShortDescription": "Serilog is a diagnostic logging library for .NET applications. It is easy to set up, has a clean API, and runs on all recent .NET platforms.",
+    "ProjectWebsiteURL": "https://serilog.net/",
+    "Tags": "serilog logging semantic structured",
+    "LogoId": 9
+  },
+  {
+    "Id": 6,
+    "Name": "Azure.Core",
+    "UserId": 4,
+    "DownloadsCount": 215117416,
+    "LastUpdateTime": "2023-11-10",
+    "ShortDescription": "Azure.Core provides shared primitives, abstractions, and helpers for modern .NET Azure SDK client libraries.",
+    "ProjectWebsiteURL": "https://github.com/Azure/azure-sdk-for-net/blob/Azure.Core_1.36.0/sdk/core/Azure.Core/README.md",
+    "Tags": "Microsoft Azure Client Pipeline",
+    "LogoId": 11
+  },
+  {
+    "Id": 7,
+    "Name": "System.Windows.Extensions",
+    "UserId": 2,
+    "DownloadsCount": 166920774,
+    "LastUpdateTime": "2023-11-14",
+    "ShortDescription": "Provides miscellaneous Windows-specific types",
+    "ProjectWebsiteURL": "https://dotnet.microsoft.com/en-us/",
+    "Tags": "",
+    "LogoId": 7
+  },
+  {
+    "Id": 8,
+    "Name": "Castle.Core",
+    "UserId": 4,
+    "DownloadsCount": 343898732,
+    "LastUpdateTime": "2022-12-30",
+    "ShortDescription": "Castle Core, including DynamicProxy, Logging Abstractions and DictionaryAdapter",
+    "ProjectWebsiteURL": "https://www.castleproject.org/",
+    "Tags": "castle dynamicproxy dynamic proxy dynamicproxy2 dictionaryadapter emailsender",
+    "LogoId": 1
+  },
+  {
+    "Id": 9,
+      "Name": "AWSSDK.Core",
+    "UserId": 4,
+    "DownloadsCount": 15965074,
+    "LastUpdateTime": "2023-11-10",
+    "ShortDescription": "The Amazon Web Services SDK for .NET - Core Runtime",
+    "ProjectWebsiteURL": "https://github.com/aws/aws-sdk-net/",
+    "Tags": "AWS Amazon cloud aws-sdk-v3",
+    "LogoId": 10
+  },
+  {
+    "Id": 10,
+    "Name": "Moq",
+    "UserId": 4,
+    "DownloadsCount": 176676652,
+    "LastUpdateTime": "2022-12-30",
+    "ShortDescription": "The most popular and friendly mocking library for .NET",
+    "ProjectWebsiteURL": "https://github.com/devlooped/moq",
+    "Tags": "moq tdd mocking mocks unittesting agile unittest",
+    "LogoId": 13
+  },
+  {
+    "Id": 11,
+    "Name": "AutoMapper",
+    "UserId": 1,
+    "DownloadsCount": 227957697,
+    "LastUpdateTime": "2023-01-16",
+    "ShortDescription": "AutoMapper is a simple little library built to solve a deceptively complex problem - getting rid of code that mapped one object to another.",
+    "ProjectWebsiteURL": "https://automapper.org/",
+    "Tags": "",
+    "LogoId": 3
+  },
+  {
+    "Id": 12,
+    "Name": "Polly",
+    "UserId": 4,
+    "DownloadsCount": 132580062,
+    "LastUpdateTime": "2023-11-14",
+    "ShortDescription": "Polly is a .NET resilience and transient-fault-handling library.",
+    "ProjectWebsiteURL": "https://github.com/App-vNext/Polly",
+    "Tags": "Polly Exception Handling Resilience Transient Fault Policy Circuit Breaker CircuitBreaker Retry Wait Cache Cache-aside Bulkhead Fallback Timeout Throttle",
+    "LogoId": 14
+  
+  },
+  {
+    "Id": 13,
+    "Name": "Microsoft.Data.SqlClient",
+    "UserId": 2,
+    "DownloadsCount": 115367575,
+    "LastUpdateTime": "2023-10-26",
+    "ShortDescription": "The current data provider for SQL Server and Azure SQL databases. This has replaced System.Data.SqlClient.",
+    "ProjectWebsiteURL": "https://github.com/dotnet/SqlClient",
+    "Tags": "sqlclient microsoft.data.sqlclient",
+    "LogoId": 4
+  },
+  {
+    "Id": 14,
+    "Name": "FluentAssertions",
+    "UserId": 3,
+    "DownloadsCount": 112238387,
+    "LastUpdateTime": "2023-08-23",
+    "ShortDescription": "A very extensive set of extension methods that allow you to more naturally specify the expected outcome of a TDD or BDD-style unit tests.",
+    "ProjectWebsiteURL": "https://fluentassertions.com/",
+    "Tags": "MSTest2 xUnit NUnit MSpec TDD BDD Fluent netstandard uwp",
+    "LogoId": 8
+  },
+  {
+    "Id": 15,
+    "Name": "FluentValidation",
+    "UserId": 4,
+    "DownloadsCount": 36023632,
+    "LastUpdateTime": "2023-12-21",
+    "ShortDescription": "FluentValidation is validation library for .NET that uses a fluent interface and lambda expressions for building strongly-typed validation rules.",
+    "ProjectWebsiteURL": "https://docs.fluentvalidation.net/en/latest/",
+    "Tags": "",
+    "LogoId": 12
+  }
+]

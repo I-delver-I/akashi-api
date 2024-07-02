@@ -1,0 +1,892 @@
+[
+  {
+    "Id": 1,
+    "LibraryVersionId": 1,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 2,
+    "LibraryVersionId": 1,
+    "FrameworkId": 35
+  },
+  {
+    "Id": 3,
+    "LibraryVersionId": 1,
+    "FrameworkId": 33
+  },
+  {
+    "Id": 4,
+    "LibraryVersionId": 1,
+    "FrameworkId": 32
+  },
+  {
+    "Id": 5,
+    "LibraryVersionId": 1,
+    "FrameworkId": 31
+  },
+  {
+    "Id": 6,
+    "LibraryVersionId": 2,
+    "FrameworkId": 35
+  },
+  {
+    "Id": 7,
+    "LibraryVersionId": 2,
+    "FrameworkId": 33
+  },
+  {
+    "Id": 8,
+    "LibraryVersionId": 2,
+    "FrameworkId": 32
+  },
+  {
+    "Id": 9,
+    "LibraryVersionId": 2,
+    "FrameworkId": 31
+  },
+  {
+    "Id": 10,
+    "LibraryVersionId": 3,
+    "FrameworkId": 35
+  },
+  {
+    "Id": 11,
+    "LibraryVersionId": 3,
+    "FrameworkId": 33
+  },
+  {
+    "Id": 12,
+    "LibraryVersionId": 3,
+    "FrameworkId": 32
+  },
+  {
+    "Id": 13,
+    "LibraryVersionId": 4,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 14,
+    "LibraryVersionId": 4,
+    "FrameworkId": 1
+  },
+  {
+    "Id": 15,
+    "LibraryVersionId": 4,
+    "FrameworkId": 27
+  },
+  {
+    "Id": 16,
+    "LibraryVersionId": 4,
+    "FrameworkId": 26
+  },
+  {
+    "Id": 17,
+    "LibraryVersionId": 4,
+    "FrameworkId": 23
+  },
+  {
+    "Id": 18,
+    "LibraryVersionId": 5,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 19,
+    "LibraryVersionId": 5,
+    "FrameworkId": 31
+  },
+  {
+    "Id": 20,
+    "LibraryVersionId": 5,
+    "FrameworkId": 27
+  },
+  {
+    "Id": 21,
+    "LibraryVersionId": 5,
+    "FrameworkId": 23
+  },
+  {
+    "Id": 22,
+    "LibraryVersionId": 6,
+    "FrameworkId": 31
+  },
+  {
+    "Id": 23,
+    "LibraryVersionId": 6,
+    "FrameworkId": 27
+  },
+  {
+    "Id": 24,
+    "LibraryVersionId": 6,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 25,
+    "LibraryVersionId": 7,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 26,
+    "LibraryVersionId": 8,
+    "FrameworkId": 27
+  },
+  {
+    "Id": 27,
+    "LibraryVersionId": 8,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 28,
+    "LibraryVersionId": 9,
+    "FrameworkId": 27
+  },
+  {
+    "Id": 29,
+    "LibraryVersionId": 9,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 30,
+    "LibraryVersionId": 10,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 31,
+    "LibraryVersionId": 10,
+    "FrameworkId": 2
+  },
+  {
+    "Id": 32,
+    "LibraryVersionId": 10,
+    "FrameworkId": 1
+  },
+  {
+    "Id": 33,
+    "LibraryVersionId": 10,
+    "FrameworkId": 26
+  },
+  {
+    "Id": 34,
+    "LibraryVersionId": 10,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 35,
+    "LibraryVersionId": 10,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 36,
+    "LibraryVersionId": 11,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 37,
+    "LibraryVersionId": 11,
+    "FrameworkId": 2
+  },
+  {
+    "Id": 38,
+    "LibraryVersionId": 11,
+    "FrameworkId": 26
+  },
+  {
+    "Id": 39,
+    "LibraryVersionId": 11,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 40,
+    "LibraryVersionId": 11,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 41,
+    "LibraryVersionId": 12,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 42,
+    "LibraryVersionId": 12,
+    "FrameworkId": 27
+  },
+  {
+    "Id": 43,
+    "LibraryVersionId": 12,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 44,
+    "LibraryVersionId": 12,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 45,
+    "LibraryVersionId": 13,
+    "FrameworkId": 1
+  },
+  {
+    "Id": 46,
+    "LibraryVersionId": 14,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 47,
+    "LibraryVersionId": 15,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 48,
+    "LibraryVersionId": 16,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 49,
+    "LibraryVersionId": 16,
+    "FrameworkId": 2
+  },
+  {
+    "Id": 50,
+    "LibraryVersionId": 16,
+    "FrameworkId": 1
+  },
+  {
+    "Id": 51,
+    "LibraryVersionId": 17,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 52,
+    "LibraryVersionId": 17,
+    "FrameworkId": 2
+  },
+  {
+    "Id": 53,
+    "LibraryVersionId": 18,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 54,
+    "LibraryVersionId": 18,
+    "FrameworkId": 5
+  },
+  {
+    "Id": 55,
+    "LibraryVersionId": 19,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 56,
+    "LibraryVersionId": 19,
+    "FrameworkId": 26
+  },
+  {
+    "Id": 57,
+    "LibraryVersionId": 19,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 58,
+    "LibraryVersionId": 19,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 59,
+    "LibraryVersionId": 20,
+    "FrameworkId": 26
+  },
+  {
+    "Id": 60,
+    "LibraryVersionId": 20,
+    "FrameworkId": 5
+  },
+  {
+    "Id": 61,
+    "LibraryVersionId": 20,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 62,
+    "LibraryVersionId": 20,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 63,
+    "LibraryVersionId": 21,
+    "FrameworkId": 28
+  },
+  {
+    "Id": 64,
+    "LibraryVersionId": 21,
+    "FrameworkId": 8
+  },
+  {
+    "Id": 65,
+    "LibraryVersionId": 21,
+    "FrameworkId": 5
+  },
+  {
+    "Id": 66,
+    "LibraryVersionId": 21,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 67,
+    "LibraryVersionId": 21,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 68,
+    "LibraryVersionId": 22,
+    "FrameworkId": 4
+  },
+  {
+    "Id": 69,
+    "LibraryVersionId": 22,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 70,
+    "LibraryVersionId": 22,
+    "FrameworkId": 2
+  },
+  {
+    "Id": 71,
+    "LibraryVersionId": 22,
+    "FrameworkId": 26
+  },
+  {
+    "Id": 72,
+    "LibraryVersionId": 22,
+    "FrameworkId": 24
+  },
+  {
+    "Id": 73,
+    "LibraryVersionId": 22,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 74,
+    "LibraryVersionId": 22,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 75,
+    "LibraryVersionId": 23,
+    "FrameworkId": 4
+  },
+  {
+    "Id": 76,
+    "LibraryVersionId": 23,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 77,
+    "LibraryVersionId": 23,
+    "FrameworkId": 2
+  },
+  {
+    "Id": 78,
+    "LibraryVersionId": 23,
+    "FrameworkId": 26
+  },
+  {
+    "Id": 79,
+    "LibraryVersionId": 23,
+    "FrameworkId": 24
+  },
+  {
+    "Id": 80,
+    "LibraryVersionId": 23,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 81,
+    "LibraryVersionId": 23,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 82,
+    "LibraryVersionId": 24,
+    "FrameworkId": 4
+  },
+  {
+    "Id": 83,
+    "LibraryVersionId": 24,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 84,
+    "LibraryVersionId": 24,
+    "FrameworkId": 31
+  },
+  {
+    "Id": 85,
+    "LibraryVersionId": 24,
+    "FrameworkId": 28
+  },
+  {
+    "Id": 86,
+    "LibraryVersionId": 24,
+    "FrameworkId": 25
+  },
+  {
+    "Id": 87,
+    "LibraryVersionId": 24,
+    "FrameworkId": 20
+  },
+  {
+    "Id": 88,
+    "LibraryVersionId": 24,
+    "FrameworkId": 17
+  },
+  {
+    "Id": 89,
+    "LibraryVersionId": 24,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 90,
+    "LibraryVersionId": 24,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 91,
+    "LibraryVersionId": 25,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 92,
+    "LibraryVersionId": 25,
+    "FrameworkId": 25
+  },
+  {
+    "Id": 93,
+    "LibraryVersionId": 25,
+    "FrameworkId": 8
+  },
+  {
+    "Id": 94,
+    "LibraryVersionId": 25,
+    "FrameworkId": 6
+  },
+  {
+    "Id": 95,
+    "LibraryVersionId": 25,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 96,
+    "LibraryVersionId": 25,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 97,
+    "LibraryVersionId": 26,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 98,
+    "LibraryVersionId": 26,
+    "FrameworkId": 25
+  },
+  {
+    "Id": 99,
+    "LibraryVersionId": 26,
+    "FrameworkId": 8
+  },
+  {
+    "Id": 100,
+    "LibraryVersionId": 26,
+    "FrameworkId": 6
+  },
+  {
+    "Id": 101,
+    "LibraryVersionId": 26,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 102,
+    "LibraryVersionId": 26,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 103,
+    "LibraryVersionId": 27,
+    "FrameworkId": 31
+  },
+  {
+    "Id": 104,
+    "LibraryVersionId": 27,
+    "FrameworkId": 25
+  },
+  {
+    "Id": 105,
+    "LibraryVersionId": 27,
+    "FrameworkId": 9
+  },
+  {
+    "Id": 106,
+    "LibraryVersionId": 27,
+    "FrameworkId": 8
+  },
+  {
+    "Id": 107,
+    "LibraryVersionId": 27,
+    "FrameworkId": 17
+  },
+  {
+    "Id": 108,
+    "LibraryVersionId": 27,
+    "FrameworkId": 14
+  },
+  {
+    "Id": 109,
+    "LibraryVersionId": 27,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 110,
+    "LibraryVersionId": 27,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 111,
+    "LibraryVersionId": 28,
+    "FrameworkId": 4
+  },
+  {
+    "Id": 112,
+    "LibraryVersionId": 28,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 113,
+    "LibraryVersionId": 28,
+    "FrameworkId": 27
+  },
+  {
+    "Id": 114,
+    "LibraryVersionId": 28,
+    "FrameworkId": 23
+  },
+  {
+    "Id": 115,
+    "LibraryVersionId": 28,
+    "FrameworkId": 8
+  },
+  {
+    "Id": 116,
+    "LibraryVersionId": 28,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 117,
+    "LibraryVersionId": 29,
+    "FrameworkId": 4
+  },
+  {
+    "Id": 118,
+    "LibraryVersionId": 29,
+    "FrameworkId": 27
+  },
+  {
+    "Id": 119,
+    "LibraryVersionId": 29,
+    "FrameworkId": 8
+  },
+  {
+    "Id": 120,
+    "LibraryVersionId": 29,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 121,
+    "LibraryVersionId": 30,
+    "FrameworkId": 27
+  },
+  {
+    "Id": 122,
+    "LibraryVersionId": 30,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 123,
+    "LibraryVersionId": 31,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 124,
+    "LibraryVersionId": 31,
+    "FrameworkId": 26
+  },
+  {
+    "Id": 125,
+    "LibraryVersionId": 31,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 126,
+    "LibraryVersionId": 31,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 127,
+    "LibraryVersionId": 32,
+    "FrameworkId": 33
+  },
+  {
+    "Id": 128,
+    "LibraryVersionId": 32,
+    "FrameworkId": 32
+  },
+  {
+    "Id": 129,
+    "LibraryVersionId": 32,
+    "FrameworkId": 31
+  },
+  {
+    "Id": 130,
+    "LibraryVersionId": 32,
+    "FrameworkId": 17
+  },
+  {
+    "Id": 131,
+    "LibraryVersionId": 32,
+    "FrameworkId": 15
+  },
+  {
+    "Id": 132,
+    "LibraryVersionId": 33,
+    "FrameworkId": 33
+  },
+  {
+    "Id": 133,
+    "LibraryVersionId": 33,
+    "FrameworkId": 31
+  },
+  {
+    "Id": 134,
+    "LibraryVersionId": 33,
+    "FrameworkId": 17
+  },
+  {
+    "Id": 135,
+    "LibraryVersionId": 34,
+    "FrameworkId": 1
+  },
+  {
+    "Id": 136,
+    "LibraryVersionId": 34,
+    "FrameworkId": 33
+  },
+  {
+    "Id": 137,
+    "LibraryVersionId": 34,
+    "FrameworkId": 31
+  },
+  {
+    "Id": 138,
+    "LibraryVersionId": 34,
+    "FrameworkId": 5
+  },
+  {
+    "Id": 139,
+    "LibraryVersionId": 34,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 140,
+    "LibraryVersionId": 35,
+    "FrameworkId": 33
+  },
+  {
+    "Id": 141,
+    "LibraryVersionId": 35,
+    "FrameworkId": 31
+  },
+  {
+    "Id": 142,
+    "LibraryVersionId": 35,
+    "FrameworkId": 5
+  },
+  {
+    "Id": 143,
+    "LibraryVersionId": 35,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 144,
+    "LibraryVersionId": 36,
+    "FrameworkId": 33
+  },
+  {
+    "Id": 145,
+    "LibraryVersionId": 36,
+    "FrameworkId": 31
+  },
+  {
+    "Id": 146,
+    "LibraryVersionId": 36,
+    "FrameworkId": 5
+  },
+  {
+    "Id": 147,
+    "LibraryVersionId": 36,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 148,
+    "LibraryVersionId": 37,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 149,
+    "LibraryVersionId": 37,
+    "FrameworkId": 26
+  },
+  {
+    "Id": 150,
+    "LibraryVersionId": 37,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 151,
+    "LibraryVersionId": 37,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 152,
+    "LibraryVersionId": 38,
+    "FrameworkId": 31
+  },
+  {
+    "Id": 153,
+    "LibraryVersionId": 38,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 154,
+    "LibraryVersionId": 38,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 155,
+    "LibraryVersionId": 39,
+    "FrameworkId": 31
+  },
+  {
+    "Id": 156,
+    "LibraryVersionId": 39,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 157,
+    "LibraryVersionId": 40,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 158,
+    "LibraryVersionId": 40,
+    "FrameworkId": 26
+  },
+  {
+    "Id": 159,
+    "LibraryVersionId": 40,
+    "FrameworkId": 23
+  },
+  {
+    "Id": 160,
+    "LibraryVersionId": 40,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 161,
+    "LibraryVersionId": 41,
+    "FrameworkId": 27
+  },
+  {
+    "Id": 162,
+    "LibraryVersionId": 41,
+    "FrameworkId": 23
+  },
+  {
+    "Id": 163,
+    "LibraryVersionId": 41,
+    "FrameworkId": 19
+  },
+  {
+    "Id": 164,
+    "LibraryVersionId": 41,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 165,
+    "LibraryVersionId": 42,
+    "FrameworkId": 19
+  },
+  {
+    "Id": 166,
+    "LibraryVersionId": 42,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 167,
+    "LibraryVersionId": 43,
+    "FrameworkId": 4
+  },
+  {
+    "Id": 168,
+    "LibraryVersionId": 43,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 169,
+    "LibraryVersionId": 43,
+    "FrameworkId": 2
+  },
+  {
+    "Id": 170,
+    "LibraryVersionId": 43,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 171,
+    "LibraryVersionId": 43,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 172,
+    "LibraryVersionId": 44,
+    "FrameworkId": 4
+  },
+  {
+    "Id": 173,
+    "LibraryVersionId": 44,
+    "FrameworkId": 3
+  },
+  {
+    "Id": 174,
+    "LibraryVersionId": 44,
+    "FrameworkId": 13
+  },
+  {
+    "Id": 175,
+    "LibraryVersionId": 44,
+    "FrameworkId": 12
+  },
+  {
+    "Id": 176,
+    "LibraryVersionId": 45,
+    "FrameworkId": 4
+  },
+  {
+    "Id": 177,
+    "LibraryVersionId": 45,
+    "FrameworkId": 27
+  },
+  {
+    "Id": 178,
+    "LibraryVersionId": 45,
+    "FrameworkId": 13
+  }
+]

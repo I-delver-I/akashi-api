@@ -1,0 +1,65 @@
+[
+  {
+    "Id": 1,
+    "FrameworkId": 26,
+    "LibraryVersionId": 37,
+    "DependencyLibraryId": 8,
+    "SupportedVersions": "(>= 5.1.1)"
+  },
+  {
+    "Id": 2,
+    "FrameworkId": 13,
+    "LibraryVersionId": 37,
+    "DependencyLibraryId": 8,
+    "SupportedVersions": "(>= 5.1.1)"
+  },
+  {
+    "Id": 3,
+    "FrameworkId": 12,
+    "LibraryVersionId": 37,
+    "DependencyLibraryId": 8,
+    "SupportedVersions": "(>= 5.1.1)"
+  },
+  {
+    "Id": 4,
+    "FrameworkId": 3,
+    "LibraryVersionId": 37,
+    "DependencyLibraryId": 8,
+    "SupportedVersions": "(>= 5.1.1)"
+  },
+  {
+    "Id": 5,
+    "FrameworkId": 31,
+    "LibraryVersionId": 38,
+    "DependencyLibraryId": 8,
+    "SupportedVersions": "(>= 4.4.0)"
+  },
+  {
+    "Id": 6,
+    "FrameworkId": 13,
+    "LibraryVersionId": 38,
+    "DependencyLibraryId": 8,
+    "SupportedVersions": "(>= 4.4.0)"
+  },
+  {
+    "Id": 7,
+    "FrameworkId": 12,
+    "LibraryVersionId": 38,
+    "DependencyLibraryId": 8,
+    "SupportedVersions": "(>= 4.4.0)"
+  },
+  {
+    "Id": 8,
+    "FrameworkId": 31,
+    "LibraryVersionId": 39,
+    "DependencyLibraryId": 8,
+    "SupportedVersions": "(>= 4.4.0)"
+  },
+  {
+    "Id": 9,
+    "FrameworkId": 13,
+    "LibraryVersionId": 39,
+    "DependencyLibraryId": 8,
+    "SupportedVersions": "(>= 4.4.0)"
+  }
+]
